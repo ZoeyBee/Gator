@@ -1,0 +1,93 @@
+* Gator: A G'MIC based animator!
+  Have you ever wanted to synthesize videos the same way you synthesize a sound?
+
+  Allows you to open images, videos, or clone other layers and animate a bunch of gmic effects
+  together to create a big variety of animations with support for most image and video formats.
+
+  Use cases:
+     * Modular Video Synthesis!
+
+     * Making your images come to life
+        * Animated textures!
+        * Looping gifs!
+
+     * Music videos!
+       * Connect your effects to audio files to animate an image with sound!
+       * Connect your effects to LFOs with sine square triangle or saw waves!
+
+     * Using gmic effects on videofiles!
+
+     * Could be used as an video editor
+       * Although please for the love of god dont!
+
+** Installing
+
+   G'MIC, Gtk3 and FFmpeg need to be installed and added to the environment.
+   To get the python requirements you can either install these from your package manager or with pip.
+   #+BEGIN_SRC bash
+      pip install --user -r requirements.txt
+   #+END_SRC
+
+   No install script yet, just python main.py or
+
+*** if you are on Linux
+    make a bash file at /usr/bin/gator
+    #+BEGIN_SRC bash
+       #!/usr/bin/bash
+       cd PATH_TO_GATOR
+       python3 main.py
+    #+END_SRC
+    make sure you chmod it to be executable with chmod 774 /usr/bin/gator
+
+*** if you are on Windows
+    make a shortcut/bat file
+
+*** if you are on MacOs
+    i dont know
+
+** todo
+   add ebsynth
+
+   make everything smaller
+
+   playback doesnt work
+
+   sharpen and kaleidoscope dont work
+
+   use a gtkpane for everything
+
+   add option to edit float sliders by value
+
+   Attribute values arent being represented/calculated properly:
+      add a keyframe at frame 1 and 6, then one at 3. Frame 2 and 4 will completely ignore frame 3
+
+   The program has a small chance to just hang completely at times
+      seems to be related to selecting frames or deleting effects
+      might have something to do with pixbufs
+
+   baseModule needs to be able to
+      resize - might only need generator and timeline
+      save the state(including expanded) and open the same way next time
+      option to reset state(effects expanded, everything autosized)
+
+   treecombobox needs to resize when options are added
+      dialog.propgate_natural_* does not update height or width when options are added to the treeview
+
+   rewrite the treecombobox in the effecteditor to use a single dialog for all widgets
+     will make us not have to load each dialog with potentially thousands of options for each effect into memory
+   clean the generator waves, some phase issues are present and some budging was done
+
+   Make a realtime video output rather than using images
+       not possible using ffmpeg commandline(currently we just render a video after all frames are rendered)
+       libav?
+       when rendering we should still be able to export sequences as uncompressed pngs
+
+   add ability to reorder layers
+     easy and already included, seems to bug the liststore though and i cant access any values properly afterwards
+
+   add interpolation
+     ffmpeg in.mp4 -filter:v minterpolate -r new-fps -b:v bitrate out.mp4
+
+   Make proper testing, atleast for the backend
+     currently using test.py that calls every backend function in a realistic order
+         does not verify output, just that no errors happened.

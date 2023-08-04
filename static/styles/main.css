@@ -1,0 +1,133 @@
+* {
+    font-family: Roboto Mono;
+    font-size: 20px;
+    font-weight: Bold;
+}
+
+cellview, label {
+    text-shadow: none;
+}
+
+arrow {
+    background: transparent;
+    border: none;
+}
+
+scrollbar {
+    background: transparent;
+    border: none;
+}
+
+slider {
+    background-color: foreground_dark;
+    border: 0;
+    border-radius: 20px;
+}
+
+window, dialog {
+    background-color: background_dark;
+    color: foreground_dark;
+}
+
+#hideBackground {
+    background-color: background_dark;
+    border: 1px solid background_dark;
+    border-radius: 200px;
+}
+
+button, entry {
+    background-color: background_dark;
+    background-image: image(background_dark);
+    color: foreground_dark;
+    border: 1px solid background_outline;
+    border-radius: 2px;
+    box-shadow: none;
+    min-height: 20px;
+    min-width: 20px;
+    padding: 10px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+button:hover, entry:focus {
+    background-color: background_hover;
+    background-image: image(background_hover);
+    color: foreground_dark;
+    border: 1px solid background_outline;
+    border-radius: 2px;
+}
+
+treeview, menu {
+    background-color: background_dark;
+    color: foreground_dark;
+    font-size: 24px;
+    border-radius: 4px;
+    border-color: background_dark;
+    padding:3px;
+}
+
+treeview:hover, menuitem:hover, menuitem:focus{
+    background-color: background_hover;
+    background: background_hover;
+    border-radius: 4px;
+}
+
+treeview:selected {
+    background-color: accent;
+    color: foreground_light;
+}
+
+#AttributeScrollArea {
+    min-width: 400px;
+}
+
+#ModuleScrollArea {
+    border: 1px solid background_outline;
+    border-radius: 4px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    min-height: 100px;
+}
+
+#EffectDeleteButton {
+    margin-right: -1px;
+}
+
+#EffectEditor {
+    min-width: 400px;
+    border: 1px solid background_outline;
+    border-radius: 4px;
+    margin-right: -1px;
+}
+
+#attributeNameLabel {
+    min-width: 300px;
+}
+
+#attributeValLabel {
+    margin-left: 19px;
+    margin-right: 12px;
+}
+
+#comboAttributeEditor {
+    margin-left: 18px;
+    margin-right: 13px;
+}
+
+#effectEditorIdComboBox {
+    min-width: 290px;
+}
+
+#layerBlendModeBox {
+    min-width: 150px;
+}
+
+#module {
+    margin-top: -1px;
+    border: 1px solid background_outline;
+    border-radius: 4px;
+}
+
+#playbackButton {
+    padding: 20px;
+}

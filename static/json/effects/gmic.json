@@ -1,0 +1,76 @@
+{"commands": {"base": "gmic -input -.png -resize {width},{height} {command} -output -.png",
+              "NeedsResize": "gmic -input \"{input_path}\" -resize {width},{height} {command} -resize {width},{height} -output \"{output_path}\""},
+ "categories": {
+   "Artistic": ["Cartoon"],
+   "Details":  ["Sharpen [shock filters]"],
+   "Deformations": ["Kaleidoscope [blended]",
+                    "Kaleidoscope [symmetry]",
+                    "Stereographic Projection"]
+ },
+ "effects": {
+   "Cartoon": {
+     "command": "cartoon {Smoothness},{Sharpening},{Edge threshold},{Edge thickness},{Color strength},{Color quantization}",
+     "attributes": {
+       "Smoothness":         {"type": "float", "value": 3,    "min": 0, "max": 10},
+       "Sharpening":         {"type": "float", "value": 150,  "min": 0, "max": 400},
+       "Edge threshold":     {"type": "float", "value": 20,   "min": 1, "max": 30},
+       "Edge thickness":     {"type": "float", "value": 0.25, "min": 0, "max": 1},
+       "Color strength":     {"type": "float", "value": 1,    "min": 0, "max": 3},
+       "Color quantization": {"type": "int",   "value": 8,    "min": 2, "max": 256}},
+     "flag": ""
+   },
+   "Sharpen [shock filters]": {
+     "command": "fx_sharpen_shock {Amplitude},{Edge threshold},{Gradient smoothness},{Iterations},{Channel(s)},{Parallel Processing},{Spatial overlap},{Preview type},{Unknown1},{Unknown2}",
+     "attributes": {
+       "Amplitude":           {"type": "float",     "value": 150, "min": 1, "max": 400},
+       "Edge threshold":      {"type": "float",     "value": 0.1, "min": 0, "max": 0.7},
+       "Gradient smoothness": {"type": "float",     "value": 0.8, "min": 0, "max": 10},
+       "Tensor smoothness":   {"type": "float",     "value": 1.1, "min": 0, "max": 10},
+       "Iterations":          {"type": "int",       "value": 1,   "min": 1, "max": 10},
+       "Channel(s)":          {"type": "invisible", "value": 0},
+       "Parallel Processing": {"type": "invisible", "value": 0},
+       "Spatial overlap":     {"type": "invisible", "value": 24},
+       "Preview type":        {"type": "invisible", "value": 0},
+       "Unknown1":            {"type": "invisible", "value": 50},
+       "Unknown2":            {"type": "invisible", "value": 50}},
+     "flag": ""
+   },
+   "Kaleidoscope [blended]": {
+     "command": "fx_rotoidoscope {Centerx},{Centery},{Angular tiles},{Smoothness},{Boundary}",
+     "attributes": {
+       "Centerx":       {"type": "position:x:percentage", "value": 0.5, "min": 0, "max": 1, "link": "Centery"},
+       "Centery":       {"type": "position:y:percentage", "value": 0.5, "min": 0, "max": 1, "link": "Centerx"},
+       "Angular tiles": {"type": "int",                   "value": 10,  "min": 1, "max": 72},
+       "Smoothness":    {"type": "float",                 "value": 1,   "min": 0, "max": 5},
+       "Boundary":      {"type": "combo",                 "value": 3,   "min": 0, "max": 3, "options": ["Transparent", "Nearest", "Periodic", "Mirror"]}},
+     "flag": ""
+   },
+   "Kaleidoscope [symmetry]": {
+     "command": "fx_symmetrizoscope {Iterations},{Angle},{Boundary},{Symmetry sides}",
+     "attributes": {
+       "Iterations":     {"type": "int",   "value": 4, "min": 1, "max": 32},
+       "Angle":          {"type": "float", "value": 0, "min": 0, "max": 360},
+       "Boundary":       {"type": "combo", "value": 3, "min": 0, "max": 3, "options": ["Transparent", "Nearest", "Periodic", "Mirror"]},
+       "Symmetry sides": {"type": "combo", "value": 0, "min": 0, "max": 2, "options": ["Backward", "Forward", "Swap"]}},
+     "flag": ""
+   },
+   "Stereographic Projection": {
+     "command": "fx_project_stereographic {Transform},{Centerx},{Centery},{Radius/Anglex},{Radius/Angley},{Horizon leveling},{Left/Right blur},{Dilation},{Mirror},{Boundary},{Unknown1},{Unknown2},{Unknown3}",
+     "attributes": {
+       "Transform":        {"type": "combo",                 "value": 0,    "min": 0, "max": 1, "options": ["Direct", "Inverse"]},
+       "Centerx":          {"type": "position:x:percentage", "value": 0.5,  "min": 0, "max": 1, "link": "Centery"},
+       "Centery":          {"type": "position:y:percentage", "value": 0.5,  "min": 0, "max": 1, "link": "Centerx"},
+       "Radius/Anglex":    {"type": "position:x:percentage", "value": 0.5,  "min": 0, "max": 1, "link": "Radius/Angley"},
+       "Radius/Angley":    {"type": "position:y:percentage", "value": 0.75, "min": 0, "max": 1, "link": "Radius/Anglex"},
+       "Horizon leveling": {"type": "float",                 "value": 0, "min": -10,  "max": 10},
+       "Left/Right blur":  {"type": "float",                 "value": 0, "min": 0,    "max": 20},
+       "Dilation":         {"type": "float",                 "value": 0, "min": -2,   "max": 2},
+       "Mirror":           {"type": "combo",                 "value": 0, "min": 0,    "max": 3, "options": ["None", "X-axis", "Y-axis", "XY-axis"]},
+       "Boundary":         {"type": "combo",                 "value": 0, "min": 0,    "max": 3, "options": ["Transparent", "Nearest", "Periodic", "Mirror"]},
+       "Unknown1":         {"type": "invisible",             "value": 0},
+       "Unknown2":         {"type": "invisible",             "value": 50},
+       "Unknown3":         {"type": "invisible",             "value": 50}},
+     "flag": "NeedsResize"
+   }
+ }
+}

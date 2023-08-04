@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="162.63992mm"
+   height="91.535934mm"
+   viewBox="0 0 162.63992 91.535934"
+   version="1.1"
+   id="svg7592"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="iconArrowDown.svg">
+  <defs
+     id="defs7586" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.1703125"
+     inkscape:cx="300.62476"
+     inkscape:cy="186.09187"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1878"
+     inkscape:window-height="989"
+     inkscape:window-x="21"
+     inkscape:window-y="45"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7589">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-26.293033,-106.53421)">
+    <path
+       style="fill:#c5d0d3;fill-opacity:0.51372549;stroke-width:0.26458332"
+       d="m 66.887224,157.43978 -40.594191,-40.61828 5.138571,-5.14365 5.13857,-5.14364 35.521766,35.52103 35.52177,35.52103 35.52176,-35.52103 35.52177,-35.52103 5.13786,5.14293 5.13786,5.14293 -40.62839,40.63107 c -22.34561,22.34709 -40.6722,40.62564 -40.72577,40.619 -0.0536,-0.007 -18.364768,-18.2903 -40.691576,-40.63036 z"
+       id="path8148"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="112.22"
+       inkscape:export-ydpi="112.22" />
+  </g>
+</svg>
